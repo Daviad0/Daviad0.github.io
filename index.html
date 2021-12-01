@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Lightning Robotics Landing</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  </head>
+  <body style="text-align:center;background-color:rgba(40,0,255,1)" id="body">
+    <br/>
+    <span style="display:inline-block;font-size:30px;margin-top:10px;color:white;font-family:Poppins;font-weight:1000">FRC862 Landing</span>
+    <br/>
+    <span style="display:inline-block;font-size:16px;margin-top:10px;color:white;font-family:Poppins;font-weight:600">Please check here every meeting for any new links that are important to fill out!!</span>
+    <br/>
+    <br/>
+    <div style="text-align:center;" id="items">
+          
+    </div>
+    <br/>
+    <br/>
+    <span id="boop" style="display:inline-block;font-size:12px;margin-top:10px;color:white;font-family:Poppins;font-weight:600;cursor:pointer">Boop :></span>
+    <br/>
+    <br/>
+  </body>
+</html>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P9DEQS4790"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P9DEQS4790');
+
+  function getUsersName(link){
+    var res = prompt("What is your student ID? (Cancel to go to Google Form)");
+    if(res != null && res != ""){
+      alert(res + ", you have been successfully signed in!");
+    }else{
+      window.open(link, '_blank').focus();
+    }
+  }
+  var boops = 0
+  document.getElementById("boop").addEventListener('click', function(){
+    if(boops % 2 == 1){
+      document.getElementById("body").style.backgroundColor = "rgba(40,0,255,1)";
+    }else{
+      document.getElementById("body").style.backgroundColor = "rgba(255, 136, 0,1)";
+    }
+    boops += 1;
+  });
+   var today = new Date();
+   var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+  var listOfLinks = [];
+  
+  fetch("Boop.txt").then(response => response.text()).then(text => {
+    var list = text.split("\n\n");
+    console.log(list);
+    list.forEach(item => {
+      var details = item.split(">>>");
+      var date = details[0].split("/")
+      if(details[0] == "EVERYDAY" || (parseInt(date[0]) == mm && parseInt(date[2]) == yyyy && (Math.abs(parseInt(date[1]) - dd) < 5))){
+        if(details[5] == "Y"){
+          //listOfLinks.push(details[4]);
+          document.getElementById("items").innerHTML += `
+          <div class="widget" style="margin-top:10px;max-width:800px" data-funct="${details[6]}" data-link="${details[4]}">
+            <div style="display:flex;width:100%;pointer-events:none">
+              <span class="material-icons-round" style="display:inline-flex;font-size:50px;margin-left:10px;margin-top:5px;pointer-events:none">
+              ${details[1]}
+              </span>
+              <div style="display:inline-flex;flex-grow:1;text-align:center;width:100%;pointer-events:none">
+                <span style="font-family: Poppins;font-weight:600;margin-top:15px;display:inline-block;width:100%;font-size:18px;pointer-events:none">${details[2]}</span>
+              </div>
+              
+            </div>
+            <span style="font-family: Poppins;display:inline-block;width:100%;margin-bottom:10px;margin-top:10px;pointer-events:none">${details[3]}</span>
+            <br/>
+          </div>      
+          <br/>
+          `
+        }
+        
+      }
+      
+    })
+    Array.from(document.getElementsByClassName("widget")).forEach(widget => {
+      widget.addEventListener('click', function(el){
+        el.srcElement.style.border = "4px solid #00ed20";
+        var element = el.srcElement;
+        var url = element.dataset.link;
+        var funct = element.dataset.funct;
+        gtag("send", "click_widget")
+        if(funct != "N"){
+          window[funct](url);
+          
+        }else{
+          window.open(url, '_blank').focus();
+        }
+        
+      })
+    })
+  });
+</script>

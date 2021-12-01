@@ -1,0 +1,18 @@
+EVERYDAY>>>cancel>>>Hmmm>>>I wonder what this file is for...>>>https://google.com>>>N>>>N
+
+EVERYDAY>>>how_to_reg>>>Sign In>>>Make sure to sign in for attendance every day you arrive to robotics! It's really important!>>>https://bit.ly/LRlogin>>>Y>>>N
+
+12/1/2021>>>pan_tool>>>FLL Explore>>>Please sign up to volunteer for the FLL explore event that is happening on THIS Saturday, the 4th! ANYONE can sign up to help out the team and get more involved!>>>https://docs.google.com/forms/d/e/1FAIpQLSctJcmghyD_nFIH6W0PSnPzCvOw7cObXt2Jwd4LK7RlD4fNRA/viewform>>>Y>>>N
+
+11/13/2021>>>shopping_cart>>>SPIRIT WEAR>>>Spirit wear orders are due at 11:59PM <strong style="color:rgba(40,0,255,1)">TONIGHT</strong>! Please make sure to order some after the meeting!!>>>https://lightningroboticsfall2021shop.itemorder.com/sale>>>Y>>>N
+
+EVERYDAY>>>person_add>>>Join the Team>>>If you have not yet signed up to be apart of Lightning Robotics for the 2022 season, please do so now here!>>>https://bit.ly/lr2021join>>>Y>>>N
+
+11/17/2021>>>directions_car>>>Drive Team Signups>>>Strategy is hosting signups and tryouts for the drive team! Feel free to sign up if you want a bit of committment on the team. This is open until this Friday!>>>https://bit.ly/3olEdnP>>>Y>>>N
+
+EVERYDAY>>>attach_money>>>Suggest Sponsors>>>We are still looking for sponsor suggestions from students or parents who have connections that are looking to sponsor a robotics team! Please suggest them here and we will reach out to you for more info. Thanks!>>>https://bit.ly/lr2021sponsor>>>Y>>>N
+
+EVERYDAY>>>edit>>>Code of Conduct>>>We require all students to fill out a code of conduct form. Please print out the linked PDF, sign it, and turn it in at the next meeting. Additionally, $150 of member dues are due by <strong style="color:rgba(40,0,255,1)">December 1st</strong>. Please make checks out to Lightning Robotics with the student's name as the memo.>>>https://bit.ly/Team862CodeofConduct>>>Y>>>N
+
+11/17/2021>>>groups>>>Subgroup Signup>>>If you haven't signed up for a subgroup yet, please do so now at this link! Leads are not required to sign up for a subgroup, but we would like veterans to!>>>https://bit.ly/LRSubgroup>>>Y>>>N
+
